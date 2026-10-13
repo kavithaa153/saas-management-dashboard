@@ -1,0 +1,255 @@
+
+.plan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  color: var(--text, #173332);
+  font-family: inherit;
+}
+
+.plan-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 22px;
+}
+
+.plan-form .form-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.plan-form .form-group label {
+  color: var(--text-secondary, #526763);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.plan-form input,
+.plan-form select,
+.plan-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border, #e1eae7);
+  border-radius: 12px;
+  outline: none;
+  background: var(--input-bg, #ffffff);
+  color: var(--text, #173332);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.plan-form input,
+.plan-form select {
+  height: 52px;
+  padding: 0 14px;
+}
+
+.plan-form textarea {
+  min-height: 100px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.plan-form input::placeholder,
+.plan-form textarea::placeholder {
+  color: var(--muted, #9aa9a5);
+  font-size: 14px;
+}
+
+.plan-form input:hover,
+.plan-form select:hover,
+.plan-form textarea:hover {
+  border-color: #b8d9cd;
+}
+
+.plan-form input:focus,
+.plan-form select:focus,
+.plan-form textarea:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.11);
+}
+
+.plan-form select {
+  cursor: pointer;
+}
+
+.plan-form select option {
+  background: var(--surface, #ffffff);
+  color: var(--text, #173332);
+}
+
+.plan-form .form-error {
+  margin-top: -2px;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.plan-form .feature-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-form .feature-input-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-form .feature-input-row .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 52px;
+  flex-shrink: 0;
+  padding: 0 18px;
+  border: 1px solid var(--border, #dce8e4);
+  border-radius: 12px;
+  background: var(--surface, #ffffff);
+  color: var(--text-secondary, #526763);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.plan-form .feature-input-row .secondary-button:hover {
+  border-color: #10b981;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.plan-form .feature-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.plan-form .feature-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 4px 10px 4px 13px;
+  border: 1px solid #b7ead5;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.plan-form .feature-chip button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #047857;
+  cursor: pointer;
+}
+
+.plan-form .feature-chip button:hover {
+  background: #d1fae5;
+}
+
+.plan-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border, #e1eae7);
+}
+
+.plan-form .form-actions .secondary-button,
+.plan-form .form-actions .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 49px;
+  padding: 0 23px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.plan-form .form-actions .secondary-button {
+  border: 1px solid var(--border, #dce8e4);
+  background: var(--surface, #ffffff);
+  color: var(--text-secondary, #526763);
+}
+
+.plan-form .form-actions .secondary-button:hover {
+  border-color: #b8d9cd;
+  background: var(--surface-soft, #f4f9f7);
+}
+
+.plan-form .form-actions .primary-button {
+  border: 1px solid #059669;
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(5, 150, 105, 0.17);
+}
+
+.plan-form .form-actions .primary-button:hover {
+  border-color: #047857;
+  background: #047857;
+  box-shadow: 0 7px 18px rgba(5, 150, 105, 0.23);
+  transform: translateY(-1px);
+}
+
+.plan-form button:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, 0.3);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .plan-form .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .plan-form .feature-input-row {
+    align-items: stretch;
+  }
+
+  .plan-form .feature-input-row .secondary-button {
+    padding: 0 13px;
+  }
+
+  .plan-form .form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .plan-form .form-actions .secondary-button,
+  .plan-form .form-actions .primary-button {
+    width: 100%;
+  }
+}

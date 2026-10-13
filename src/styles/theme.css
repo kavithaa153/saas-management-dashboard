@@ -1,0 +1,271 @@
+
+:root {
+  color-scheme: light;
+  --app-bg: #f7faf9;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --text-primary: #173332;
+  --text-secondary: #526763;
+  --text-muted: #7b8987;
+  --border-color: #e1eae7;
+  --table-head-bg: #f4f8f6;
+  --hover-bg: #ecfdf5;
+  --sidebar-bg: #102a2b;
+  --accent: #059669;
+  --accent-light: #ecfdf5;
+  --overlay: rgba(15, 23, 42, 0.45);
+  --card-shadow: 0 4px 18px rgba(16, 42, 43, 0.05);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --app-bg: #101a1b;
+  --card-bg: #192829;
+  --input-bg: #203536;
+  --text-primary: #e8f2ef;
+  --text-secondary: #c0d0cb;
+  --text-muted: #a0b2ad;
+  --border-color: #344949;
+  --table-head-bg: #203233;
+  --hover-bg: #263d3c;
+  --sidebar-bg: #0c2021;
+  --accent: #34d399;
+  --accent-light: #183e34;
+  --overlay: rgba(0, 0, 0, 0.65);
+  --card-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+}
+
+html {
+  min-height: 100%;
+  background: var(--app-bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--text-primary);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Inter, Arial, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+}
+
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] #root,
+:root[data-theme="dark"] .app-shell,
+:root[data-theme="dark"] .app-main,
+:root[data-theme="dark"] .main-content,
+:root[data-theme="dark"] .page-content,
+:root[data-theme="dark"] main {
+  background-color: var(--app-bg);
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] .app-header,
+:root[data-theme="dark"] .topbar,
+:root[data-theme="dark"] .header,
+:root[data-theme="dark"] .page-header {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .settings-page,
+:root[data-theme="dark"] .settings-hero,
+:root[data-theme="dark"] .settings-layout,
+:root[data-theme="dark"] .settings-content {
+  background-color: var(--app-bg);
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] .settings-sidebar,
+:root[data-theme="dark"] .settings-card,
+:root[data-theme="dark"] .settings-option,
+:root[data-theme="dark"] .theme-card,
+:root[data-theme="dark"] .settings-nav {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .settings-nav.active {
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .settings-card-header p,
+:root[data-theme="dark"] .settings-option span,
+:root[data-theme="dark"] .settings-hero p,
+:root[data-theme="dark"] .settings-eyebrow {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .settings-card h2,
+:root[data-theme="dark"] .settings-card strong,
+:root[data-theme="dark"] .settings-field label,
+:root[data-theme="dark"] .settings-hero h1 {
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] .settings-field input,
+:root[data-theme="dark"] .settings-field select,
+:root[data-theme="dark"] .settings-field textarea,
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .theme-card.active {
+  border-color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+:root[data-theme="dark"] .settings-toggle {
+  background-color: #405452;
+}
+
+:root[data-theme="dark"] .settings-toggle.active {
+  background-color: var(--accent);
+}
+
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .customer-stat-card,
+:root[data-theme="dark"] .customers-panel,
+:root[data-theme="dark"] .plans-panel,
+:root[data-theme="dark"] .subscriptions-panel,
+:root[data-theme="dark"] .reports-panel,
+:root[data-theme="dark"] .report-card,
+:root[data-theme="dark"] .analytics-card,
+:root[data-theme="dark"] .dashboard-card,
+:root[data-theme="dark"] .content-card,
+:root[data-theme="dark"] .users-panel,
+:root[data-theme="dark"] .users-card,
+:root[data-theme="dark"] .plan-card,
+:root[data-theme="dark"] .subscription-card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+:root[data-theme="dark"] table {
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] thead,
+:root[data-theme="dark"] th {
+  background-color: var(--table-head-bg);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] td {
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] tbody tr:hover {
+  background-color: var(--hover-bg);
+}
+
+:root[data-theme="dark"] .customers-table-wrap,
+:root[data-theme="dark"] .plans-table-wrap,
+:root[data-theme="dark"] .subscriptions-table-wrap,
+:root[data-theme="dark"] .reports-table-wrap,
+:root[data-theme="dark"] .table-container {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .customers-table th,
+:root[data-theme="dark"] .plans-table th,
+:root[data-theme="dark"] .subscriptions-table th,
+:root[data-theme="dark"] .reports-table th {
+  background-color: var(--table-head-bg);
+  color: var(--text-secondary);
+}
+
+:root[data-theme="dark"] .customers-table td,
+:root[data-theme="dark"] .plans-table td,
+:root[data-theme="dark"] .subscriptions-table td,
+:root[data-theme="dark"] .reports-table td {
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .customers-table tr:hover,
+:root[data-theme="dark"] .plans-table tr:hover,
+:root[data-theme="dark"] .subscriptions-table tr:hover,
+:root[data-theme="dark"] .reports-table tr:hover {
+  background-color: var(--hover-bg);
+}
+
+:root[data-theme="dark"] .modal,
+:root[data-theme="dark"] .modal-content,
+:root[data-theme="dark"] .dropdown-menu,
+:root[data-theme="dark"] .popover,
+:root[data-theme="dark"] .notification-panel {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .text-muted,
+:root[data-theme="dark"] .muted,
+:root[data-theme="dark"] .secondary-text {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .search-input,
+:root[data-theme="dark"] .global-search,
+:root[data-theme="dark"] .filter-select {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .settings-primary-button {
+  background-color: var(--accent);
+  color: #062b21;
+}
+
+:root[data-theme="dark"] .settings-option {
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .settings-nav:hover,
+:root[data-theme="dark"] .theme-card:hover {
+  background-color: var(--hover-bg);
+}
+
+* {
+  box-sizing: border-box;
+}

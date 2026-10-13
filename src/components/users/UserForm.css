@@ -1,0 +1,175 @@
+
+.user-form {
+  width: 100%;
+  color: var(--text, #173332);
+  font-family: inherit;
+}
+
+.user-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 22px;
+  padding: 2px 0 28px;
+}
+
+.user-form-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.user-form-field label {
+  display: block;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 650;
+  color: var(--text-secondary, #526763);
+}
+
+.user-form-field label span {
+  color: #059669;
+}
+
+.user-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid var(--border, #e1eae7);
+  border-radius: 12px;
+  background: var(--input-bg, #ffffff);
+  color: var(--muted, #7b8987);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.user-input-wrap:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.11);
+}
+
+.user-input-wrap svg {
+  flex-shrink: 0;
+}
+
+.user-input-wrap input,
+.user-input-wrap select {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text, #173332);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 450;
+}
+
+.user-input-wrap select {
+  cursor: pointer;
+}
+
+.user-input-wrap input::placeholder {
+  color: var(--muted, #9aa9a5);
+  font-size: 14px;
+}
+
+.user-input-wrap select option {
+  background: var(--surface, #ffffff);
+  color: var(--text, #173332);
+}
+
+.user-status-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: #059669;
+}
+
+.user-status-dot.inactive {
+  background: #dc2626;
+}
+
+.user-status-dot.pending {
+  background: #f59e0b;
+}
+
+.user-form-error {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #dc2626;
+}
+
+.user-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border, #e1eae7);
+}
+
+.user-form-actions button {
+  min-height: 49px;
+  padding: 0 23px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.user-cancel-button {
+  border: 1px solid var(--border, #dce8e4);
+  background: var(--surface, #ffffff);
+  color: var(--text-secondary, #526763);
+}
+
+.user-cancel-button:hover {
+  background: var(--surface-soft, #f4f9f7);
+  border-color: #b8d9cd;
+}
+
+.user-submit-button {
+  border: 1px solid #059669;
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(5, 150, 105, 0.17);
+}
+
+.user-submit-button:hover {
+  background: #047857;
+  border-color: #047857;
+  box-shadow: 0 7px 18px rgba(5, 150, 105, 0.23);
+  transform: translateY(-1px);
+}
+
+.user-form-actions button:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, 0.3);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .user-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding-bottom: 22px;
+  }
+
+  .user-form-actions {
+    gap: 10px;
+  }
+
+  .user-form-actions button {
+    flex: 1;
+    padding: 0 12px;
+  }
+}
