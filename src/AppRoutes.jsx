@@ -7,7 +7,7 @@ import {
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Users from "./pages/Users/Users";
 import Plans from "./pages/Plans/Plans";
-import Subscriptions from "./pages/subscriptions/Subscriptions";
+import Subscriptions from "./pages/Subscriptions/Subscriptions.jsx";
 import UsageAnalytics from "./pages/UsageAnalytics/UsageAnalytics";
 import RevenueAnalytics from "./pages/RevenueAnalytics/RevenueAnalytics";
 import Customers from "./pages/Customers/Customers";
